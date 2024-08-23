@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal portfolio website</title>
+    <link rel="stylesheet" href="./style.css">
+    <script src="https://kit.fontawesome.com/6a30d6a9d7.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div id="header">
+        <div class="container">
+            <nav>
+                <a href="#header" class="logo"><h1>portfolio</h1></a>
+                <ul id="Sidemenu">
+                    <li><a href="#header" target="_parent">Home</a></li>
+                    <li><a href="#about" target="_blank">About</a></li>
+                    <li><a href="#project" target="_blank">My Projects</a></li>
+                    <li><a href="#contact" target="_blank">Contact</a></li>
+                    <i class="fas fa-times" onclick="closemenu()"></i>
+                </ul>
+                <i class="fas fa-bars" onclick="openmenu()"></i>
+            </nav> 
+           
+             <div class="header-text">
+                <p> Web Developer</p>
+                <h1>Hi,I,m <span>Siva</span>prasad<br> From Andhra pradesh</h1>
+            </div>
+        </div>
+    </div>
+     <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="./images/About.png" alt="" height="300px">
+                </div>
+                <div class="about-col-2">
+                    <h1 class="sub-title">About Me</h1>
+                    <p class="sub-title-p">
+                        I recently graduate from JNTU-K university/MVR college of engineering with a degree in Computer
+                        science.With a keen interest in both frontend and backend development,I,m excited to dive into
+                        the world of full-stack development and explore its endless possibilities.
+                    </p>
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                        <p class="tab-links" onclick="opentab('education')">Education</p>
+                    </div>
+                    <div class="tab-contents active-tab" id="skills">
+                        <ul>
+                            <li><span>Forntend:</span><br>Designing Web/App interfaces</li>
+                            <li><span>Languages:</span> <br>HTML,CSS,JavaScript,CMS Wordpress.</li>
+                            <li><span>Backend:</span> <br> Server-side apllications</li>
+                            <li><span>Languages:</span> <br>JavaScript,java.</li>
+                            <li><span>Databases:</span> <br>Managing and organizing structured data</li>
+                            <li><span>Languages:</span> <br>SQL,Oracle,MYSQL.</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="education">
+                        <ul>
+                            <li><span><u>Graduation</u></span></li> 
+                            <li><span>College:</span> <br>MVR college of engineering <br></li>
+                            <li><span>Qualification:</span> <br>B.TECH <br></li>
+                            <li><span>Stream:</span> <br>Computer Science</li>
+                            <li><span>Year of passout:</span> <br>2023</li>
+                            <li><span>points:</span> <br>6.82</li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+        </div> 
+     </div> 
+     <div id="project">
+        <div class="container">
+            <h1>Academic Projects</h1> <br>
+            <div class="project-list">
+                <div class="project">
+                    <img src="./images/block&ai.jpg" alt=""  height="200px">
+                    <div class="layer">
+                        <h3>Securing Data With Block-Chain And AI</h3>
+                        <p>we propse the SecNet,an architecture that can enable secure datastoring,computing,and sharing in the large-scale Internet environment,aiming at a more cyberspace with real big data.</p>
+                        <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                    </div>
+                </div>
+                <div class="project">
+                    <img src="./images/bloodbank 1.webp" alt="" height="200px">
+                    <div class="layer">
+                        <h3>Online Blood Bank Management System</h3>
+                        <p id="align">This project is aimed to developing an online Blood Donation Information. The entire project has been developed keeping in <br> view of the distributed client server computing technology, in mind. </p>
+                        <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></i></a>
+                    </div>
+                </div>
+                
+            </div>
+            <a href="#" class="btn">See more</a>
+        </div>
+    </div>
+    <div id="contact">
+    <div class="container">
+        <div class="row">
+            <div class="contact-left">
+                <h1 class="sub-title">Contact Me</h1>
+                <p><i class="fa-solid fa-envelope"></i>sivacrcrs123@gmail.com</p>
+                <p><i class="fa-solid fa-phone"></i>7816080104</p>
+                <div class="social-icons">
+                    <a href=""><i class="fa-brands fa-facebook"></i></a>
+                    <a href=""><i class="fa-brands fa-twitter-square"></i></a>
+                    <a href=""><i class="fa-brands fa-instagram"></i></a>
+                    <a href=""><i class="fa-brands fa-linkedin"></i></a>
+                    <a href=""><i class="fa-brands fa-github"></i></a>
+                </div>
+                <a href="../portfolo/index.html" class="btn btn2" download>Download Cv</a>
+            </div>
+            <div class="contact-right">
+                <form action="">
+                    <input type="text" name="name" placeholder="Your Name" required>
+                    <input type="email" name="email"  placeholder="Your email" required>
+                    <textarea name="Message"  rows="6" placeholder="Your Message"></textarea>
+                    <button type="submit" class="btn btn2">Submit</button>
+                </form>
+            </div>
+
+        </div>
+    </div>
+    <div class="copyright">
+        <p>copyright@ siva. personal portfolio</p>
+    </div> 
+
+    <br>
+    <br>
+    <script>
+        var tablinks = document.getElementsByClassName("tab-links");
+        var tabcontents = document.getElementsByClassName("tab-contents");
+
+        function opentab(tabname) {
+            for (tablink of tablinks) {
+                tablink.classList.remove("active-link");
+            }
+            for (tabcontent of tabcontents) {
+                tabcontent.classList.remove("active-tab");
+            }
+            event.currentTarget.classList.add("active-link");
+            document.getElementById(tabname).classList.add("active-tab");
+
+        }
+
+    </script>
+    
+    <script>
+        var sidemenu =document.getElementById("Sidemenu");
+        function openmenu(){
+            sidemenu.style.right="0";
+        }
+        function closemenu(){
+            sidemenu.style.right="-200px"
+        }
+    </script>
+    <script type="text/JavaScript">
+        window.addEventListener("scroll", function()){
+            var nav = document.querySelector("nav");
+            nav.classList.toggle("sticky", window.scrollY > 0);
+        }
+    </script>
+
+
+</body>
+
+</html>
